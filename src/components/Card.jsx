@@ -39,7 +39,7 @@ const Card = ({ data }) => {
         </div>
 
         <div className="d-flex align-items-center gap-3">
-          <div style={{ width: "20px", height: "auto" }}>
+          <div style={{ width: "15px", height: "auto" }}>
             <Image
               className="w-100 h-100"
               src="https://res.cloudinary.com/dbxvk3apv/image/upload/v1694596461/cofeshop/PngItem_1381056_1_1_fkoyqh.png"
