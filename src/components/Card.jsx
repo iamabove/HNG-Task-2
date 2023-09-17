@@ -3,14 +3,12 @@ import { Image } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
 const Card = ({ data, percentage }) => {
-  const [current, setCurrent] = useState(0);
-  console.log(data);
 
 
   return (
     <div data-testid="movie-card">
       <Link to={`/movies/${data.id}`}>
-        <div data-testid="movie-poster">
+        <div>
           <Image
             style={{ objectFit: "cover" }}
             className="w-100 h-100"
@@ -24,7 +22,7 @@ const Card = ({ data, percentage }) => {
             : data[current].title}
         </h1> */}
       
-      <h4 data-testid="movie-release-date">{data.release_date}</h4>
+      <h4 data-testid="movie-released-date">{data.release_date}</h4>
       <h1 data-testid="movie-title">
         {data.title}
       </h1>

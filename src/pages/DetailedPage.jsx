@@ -53,7 +53,6 @@ const DetailedPage = () => {
                 className="w-100 h-100"
                 style={{ objectFit: "cover", borderRadius: "20px" }}
                 src={`https://image.tmdb.org/t/p/original/${movie.backdrop_path}`}
-                data-testid="movie-poster"
                 
               />
             </div>

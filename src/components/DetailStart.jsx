@@ -35,7 +35,7 @@ const DetailStart = ({ movie }) => {
             }}
           />
           <h3 data-testid="movie-runtime" className="mb-0">
-            {movie.runtime} Minutes
+            {movie.runtime}
           </h3>
 
           <div className="d-flex gap-2">
@@ -63,11 +63,12 @@ const DetailStart = ({ movie }) => {
           </div>{" "}
           <h3 className="mb-0">|</h3>
           <h3 style={{ color: "#666666" }} className="mb-0">
-            {movie.vote_count}
+            {movie.vote_average.toFixed(2)}
           </h3>
         </div>
       </div>
-      <DetailedfContent movie={movie}/>
+      <h3 style={{ color: "rgb(102,102,102)" }}>{movie.vote_count}</h3>
+      {/* <DetailedfContent movie={movie}/> */}
     </div>
   );
 };

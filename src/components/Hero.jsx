@@ -9,12 +9,11 @@ const Hero = ({ data }) => {
       <Image
         src={`https://image.tmdb.org/t/p/original/${data[current].backdrop_path}`}
         className="w-100 h-100"
-        data-test="movie-poster"
       />
       <div className="position-absolute w-100 hero-text">
         <div className="cc-container">
           <div className="text-holder">
-            <h1 data-testid ="movie-title" className="sans title mb-0 text-white overview">
+            <h1 className="sans title mb-0 text-white overview">
               {data[current].title.length > 32
                 ? `${data[current].title.slice(0, 29).trim()}...`
                 : data[current].title}

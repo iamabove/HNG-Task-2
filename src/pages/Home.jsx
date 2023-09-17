@@ -27,7 +27,7 @@ const Home = () => {
         // const localDate = new Date(Date.UTC(...release_date.split("-")));
 
         // setFeaturedMovies({ ...data, release_date: localDate.toDateString() });
-        setFeaturedMovies(response.data.results.slice(5, 15));
+        setFeaturedMovies(response.data.results.slice(0, 10));
       } catch (err) {
         console.log(err);
         setError(error.message);
@@ -62,7 +62,7 @@ const Home = () => {
             </Link>
           </div>
           <div className="mt-4 cc-container">
-            <Row data-testid="movie-card" className="card-gap">
+            <Row className="card-gap">
               {featuredMovies.map((each) => (
                 <Col xs={6} md={4} xl={3}>
                   <Card data={each} percentage={percentage}/>
