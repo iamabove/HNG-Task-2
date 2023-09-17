@@ -14,7 +14,7 @@ const Hero = ({ data }) => {
       <div className="position-absolute w-100 hero-text">
         <div className="cc-container">
           <div className="text-holder">
-            <h1 data-testid = "movie-title" className="sans title mb-0 text-white overview">
+            <h1 data-testid ="movie-title" className="sans title mb-0 text-white overview">
               {data[current].title.length > 32
                 ? `${data[current].title.slice(0, 29).trim()}...`
                 : data[current].title}

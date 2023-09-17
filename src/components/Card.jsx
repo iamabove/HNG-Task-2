@@ -24,11 +24,9 @@ const Card = ({ data }) => {
             : data[current].title}
         </h1> */}
       
-      {/* <h4 data-testid="movie-release-date">{data.release_date}</h4> */}
+      <h4 data-testid="movie-release-date">{data.release_date}</h4>
       <h1 data-testid="movie-title">
-        {data.title.length > 14
-          ? `${data.title.slice(0, 10).trim()}...`
-          : data.title}
+        {data.title}
       </h1>
       <div className="d-flex justify-content-between align-items-center">
         <div className="d-flex align-items-center gap-2">

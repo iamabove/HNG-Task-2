@@ -42,7 +42,7 @@ const DetailedPage = () => {
         <div className="menu-div"></div>
       </div>
 
-      <div className="d-flex ">
+      <div data-testid="movie-title" className="d-flex ">
         <div className="d-none d-lg-block">
           <Sidebar />
         </div>
@@ -53,6 +53,8 @@ const DetailedPage = () => {
                 className="w-100 h-100"
                 style={{ objectFit: "cover", borderRadius: "20px" }}
                 src={`https://image.tmdb.org/t/p/original/${movie.backdrop_path}`}
+                data-testid="movie-poster"
+                
               />
             </div>
             <div className="px-3">
@@ -62,6 +64,7 @@ const DetailedPage = () => {
           </div>
         )}
       </div>
+      
     </div>
   );
 };

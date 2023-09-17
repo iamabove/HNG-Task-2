@@ -21,6 +21,12 @@ const Home = () => {
           `${BASE_URL}/movie/top_rated?api_key=${API_KEY}&language=en-US&page=1`
         );
         setHeroMovies(response.data.results.slice(0, 5));
+
+        // const { release_date } = data;
+
+        // const localDate = new Date(Date.UTC(...release_date.split("-")));
+
+        // setFeaturedMovies({ ...data, release_date: localDate.toDateString() });
         setFeaturedMovies(response.data.results.slice(5, 15));
       } catch (err) {
         console.log(err);
