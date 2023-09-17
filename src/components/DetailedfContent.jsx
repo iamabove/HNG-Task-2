@@ -1,5 +1,5 @@
 import React from "react";
-import {AiFillPlayCircle} from "react-icons/ai"
+import { AiFillPlayCircle } from "react-icons/ai";
 
 const DetailedfContent = ({ movie }) => {
   const director = movie.credits.crew.find((each) => each.job === "Director");
@@ -17,7 +17,7 @@ const DetailedfContent = ({ movie }) => {
     <div>
       <div className="d-flex flex-column flex-lg-row gap-4 gap-lg-0 justify-content-between mt-3">
         <div className="firstDiv">
-          <h6 data-testid = "movie-overview">{movie.overview}</h6>
+          <h6 data-testid="movie-overview">{movie.overview}</h6>
           <div>
             <h4>
               Director: <span>{director.name}</span>
@@ -48,13 +48,16 @@ const DetailedfContent = ({ movie }) => {
           </div>
         </div>
         <div className="secondDiv">
-        <div className="hero-button2 d-flex justify-content-center gap-2 
-        w-75 align-items-center">
-              <AiFillPlayCircle size={20} color="white" />
-              <h6 className="mb-0">Save favourite shows</h6>
-          </div>
+         
         </div>
       </div>
+      <div
+            className="hero-button2 d-flex justify-content-center gap-2 
+        w-75 align-items-center"
+          >
+            <AiFillPlayCircle size={20} color="white" />
+            <h6 className="mb-0">Save favourite shows</h6>
+          </div>
     </div>
   );
 };

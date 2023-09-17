@@ -21,7 +21,7 @@ const routes = [
                 )
             },
             {
-                path:"/movie/:id",
+                path:"/movies/:id",
                 element: (
                     <React.Suspense>
                         <DetailedPage/>

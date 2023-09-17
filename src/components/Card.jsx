@@ -6,15 +6,16 @@ const Card = ({ data }) => {
   const [current, setCurrent] = useState(0);
   console.log(data);
 
+
   return (
-    <div data-testid ="movie-card">
-      <Link to={`/movie/${data.id}`}>
-        <div data-testid ="movie-poster">
+    <div data-testid="movie-card">
+      <Link to={`/movies/${data.id}`}>
+        <div data-testid="movie-poster">
           <Image
             style={{ objectFit: "cover" }}
             className="w-100 h-100"
             src={`https://image.tmdb.org/t/p/w500${data.poster_path}`}
-            data-testid ="movie-poster"
+            data-testid="movie-poster"
           />
         </div>
         {/* <h1 className="sans title mb-0 text-white overview">
@@ -22,9 +23,13 @@ const Card = ({ data }) => {
             ? `${data[current].title.slice(0, 29).trim()}...`
             : data[current].title}
         </h1> */}
-      </Link>
-      <h4 data-testid ="movie-release-date">{data.release_date}</h4>
-      <h1 data-testid ="movie-title">{data.title.length > 14 ? `${data.title.slice(0, 10).trim()}...` : data.title}</h1>
+      
+      {/* <h4 data-testid="movie-release-date">{data.release_date}</h4> */}
+      <h1 data-testid="movie-title">
+        {data.title.length > 14
+          ? `${data.title.slice(0, 10).trim()}...`
+          : data.title}
+      </h1>
       <div className="d-flex justify-content-between align-items-center">
         <div className="d-flex align-items-center gap-2">
           <div style={{ width: "40px", height: "auto" }}>
@@ -47,9 +52,9 @@ const Card = ({ data }) => {
           </div>
           <p className="mb-0">{Math.floor(Math.random() * 100)}%</p>
         </div>
-
       </div>
       {/* <h1>{data.genre}</h1> */}
+      </Link>
     </div>
   );
 };
