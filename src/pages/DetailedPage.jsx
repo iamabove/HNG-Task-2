@@ -4,7 +4,7 @@ import { API_KEY, BASE_URL } from "../api/config";
 import axios from "axios";
 import Sidebar from "../components/Sidebar";
 import Logo from "../components/Logo";
-import { HiMenuAlt4 } from "react-icons/hi";
+// import { HiMenuAlt4 } from "react-icons/hi";
 import { Image } from "react-bootstrap";
 import DetailedfContent from "../components/DetailedfContent";
 import DetailedStart from "../components/DetailStart"

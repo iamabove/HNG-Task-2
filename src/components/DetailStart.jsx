@@ -7,7 +7,7 @@ const DetailStart = ({ movie }) => {
     <div>
       <div className="d-flex justify-content-between flex-wrap gap-3 gap-lg-0 ">
         <div className="d-flex align-items-center gap-2 flex-wrap">
-          <h3 data-testid = "movie-title" className="mb-0">{movie.title}</h3>
+          <h3 data-testid="movie-title"  className="mb-0">{movie.title}</h3>
           <div
             style={{
               width: "10px",
@@ -16,7 +16,7 @@ const DetailStart = ({ movie }) => {
               background: "black",
             }}
           />
-          <h3 data-testid = "movie-release-date"  className="mb-0">{movie.release_date}</h3>
+          <h3 data-testid="movie-release-date"  className="mb-0">{movie.release_date}</h3>
           <div
             style={{
               width: "10px",

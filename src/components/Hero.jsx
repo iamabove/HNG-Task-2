@@ -13,10 +13,11 @@ const Hero = ({ data }) => {
       <div className="position-absolute w-100 hero-text">
         <div className="cc-container">
           <div className="text-holder">
-            <h1 className="sans title mb-0 text-white overview">
-              {data[current].title.length > 32
+            <h1 data-testid="movie-title" className="sans title mb-0 text-white overview">
+              {/* {data[current].title.length > 32
                 ? `${data[current].title.slice(0, 29).trim()}...`
-                : data[current].title}
+                : data[current].title} */}
+                {data[current].title}
             </h1>
             <div className="d-flex gap-3 align-items-center">
               <div style={{ width: "40px", height: "auto" }}>
@@ -29,10 +30,11 @@ const Hero = ({ data }) => {
                 {data[current].vote_average.toFixed(2)}% / 10
               </p>
             </div>
-            <h6 data-testid = "movie-overview"  className="text-white overview">
-              {data[current].overview.length > 240
+            <h6 data-testid="movie-overview"  className="text-white overview">
+              {/* {data[current].overview.length > 240
                 ? `${data[current].overview.slice(0, 237).trim()}...`
-                : data[current].overview}
+                : data[current].overview} */}
+                {data[current].overview}
             </h6>
             <div className="hero-button d-flex gap-2 align-items-center">
               <AiFillPlayCircle size={20} color="white" />
