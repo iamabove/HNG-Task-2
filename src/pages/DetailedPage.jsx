@@ -42,7 +42,7 @@ const DetailedPage = () => {
         <div className="menu-div"></div>
       </div>
 
-      <div data-testid="movie-title" className="d-flex ">
+      <div className="d-flex ">
         <div className="d-none d-lg-block">
           <Sidebar />
         </div>
