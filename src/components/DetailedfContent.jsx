@@ -1,4 +1,5 @@
 import React from "react";
+import {AiFillPlayCircle} from "react-icons/ai"
 
 const DetailedfContent = ({ movie }) => {
   const director = movie.credits.crew.find((each) => each.job === "Director");
@@ -46,7 +47,13 @@ const DetailedfContent = ({ movie }) => {
             ) : null}
           </div>
         </div>
-        <div className="secondDiv"></div>
+        <div className="secondDiv">
+        <div className="hero-button2 d-flex justify-content-center gap-2 
+        w-75 align-items-center">
+              <AiFillPlayCircle size={20} color="white" />
+              <h6 className="mb-0">Save favourite shows</h6>
+          </div>
+        </div>
       </div>
     </div>
   );

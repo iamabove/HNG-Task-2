@@ -18,10 +18,10 @@ const Home = () => {
     async function fetchData() {
       try {
         const response = await axios.get(
-          `${BASE_URL}/trending/movie/week?api_key=${API_KEY}&language=en-US&page=1`
+          `${BASE_URL}/movie/top_rated?api_key=${API_KEY}&language=en-US&page=1`
         );
         setHeroMovies(response.data.results.slice(0, 5));
-        setFeaturedMovies(response.data.results.slice(5, 17));
+        setFeaturedMovies(response.data.results.slice(5, 15));
       } catch (err) {
         console.log(err);
         setError(error.message);
@@ -52,12 +52,12 @@ const Home = () => {
             </Link>
           </div>
           <div className="mt-4 cc-container">
-            <Row data-testid ="movie-card" className="card-gap">
-                {featuredMovies.map((each) =>(
-                    <Col xs={6} md={4} xl={3}>
-                        <Card data-testid ="movie-card" data={each}/>
-                    </Col>
-                ))}
+            <Row data-testid="movie-card" className="card-gap">
+              {featuredMovies.map((each) => (
+                <Col xs={6} md={4} xl={3}>
+                  <Card data-testid="movie-card" data={each} />
+                </Col>
+              ))}
             </Row>
           </div>
         </div>

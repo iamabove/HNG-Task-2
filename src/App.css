@@ -97,8 +97,15 @@ input::placeholder {
 
 .hero-button {
   padding: 6px 16px;
-  border-radius: 6px;
+  border-radius: 16px;
   background-color: #be123c;
+  width: max-content;
+}
+
+.hero-button2 {
+  padding: 6px 16px;
+  border-radius: 6px;
+  background-color: rgb(190, 18, 60, 0.7);
   width: max-content;
 }
 
