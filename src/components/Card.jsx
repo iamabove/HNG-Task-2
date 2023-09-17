@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Image } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
-const Card = ({ data }) => {
+const Card = ({ data, percentage }) => {
   const [current, setCurrent] = useState(0);
   console.log(data);
 
@@ -37,7 +37,7 @@ const Card = ({ data }) => {
             />
           </div>
           <h3 style={{ fontWeight: "700" }} className="small-text mb-0">
-            {data.vote_average.toFixed(2)}% / 10
+            {data.vote_average.toFixed(2)} / 10
           </h3>
         </div>
 
@@ -48,7 +48,7 @@ const Card = ({ data }) => {
               src="https://res.cloudinary.com/dbxvk3apv/image/upload/v1694596461/cofeshop/PngItem_1381056_1_1_fkoyqh.png"
             />
           </div>
-          <p className="mb-0">{Math.floor(Math.random() * 100)}%</p>
+          <p className="mb-0">{percentage}</p>
         </div>
       </div>
       {/* <h1>{data.genre}</h1> */}

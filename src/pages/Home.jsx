@@ -38,6 +38,10 @@ const Home = () => {
     fetchData();
   }, []);
 
+  function percentage() {
+    return Math.floor(Math.random() * (100 - 70 + 1)) + 70;
+  }
+
   console.log(HeroMovies);
   console.log(featuredMovies);
 
@@ -61,7 +65,7 @@ const Home = () => {
             <Row data-testid="movie-card" className="card-gap">
               {featuredMovies.map((each) => (
                 <Col xs={6} md={4} xl={3}>
-                  <Card data-testid="movie-card" data={each} />
+                  <Card data={each} percentage={percentage}/>
                 </Col>
               ))}
             </Row>
