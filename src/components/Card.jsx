@@ -22,7 +22,7 @@ const Card = ({ data, percentage }) => {
             : data[current].title}
         </h1> */}
       
-      <h4 data-testid="movie-released-date">{data.release_date}</h4>
+      <h4 data-testid="movie-release-date">{data.release_date}</h4>
       <h1 data-testid="movie-title">
         {data.title}
       </h1>
